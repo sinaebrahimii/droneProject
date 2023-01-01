@@ -61,6 +61,7 @@ public class Drone extends File {
         if (this.getTakeOf()) {
             this.forward += 50;
             this.x += 50;
+            System.out.println(color.getTEXT_GREEN()+"moved forward "+color.getTEXT_RESET());
         } else {
             System.out.println(color.getTEXT_RED() + "You need to take of first." + color.getTEXT_RESET());
         }
@@ -71,6 +72,8 @@ public class Drone extends File {
         if (this.getTakeOf()) {
             this.backward += 50;
             this.x -= 50;
+            System.out.println(color.getTEXT_GREEN()+"moved backward "+color.getTEXT_RESET());
+
         } else {
             System.out.println(color.getTEXT_RED() + "You need to take of first." + color.getTEXT_RESET());
         }
@@ -80,6 +83,8 @@ public class Drone extends File {
         if (this.getTakeOf()) {
             this.right += 50;
             this.y += 50;
+            System.out.println(color.getTEXT_GREEN()+"moved right "+color.getTEXT_RESET());
+
         } else {
             System.out.println(color.getTEXT_RED() + "You need to take of first." + color.getTEXT_RESET());
         }
@@ -89,6 +94,8 @@ public class Drone extends File {
         if (this.getTakeOf()) {
             this.left += 50;
             this.y -= 50;
+            System.out.println(color.getTEXT_GREEN()+"moved left "+color.getTEXT_RESET());
+
         } else {
             System.out.println(color.getTEXT_RED() + "You need to take of first." + color.getTEXT_RESET());
         }
@@ -98,6 +105,8 @@ public class Drone extends File {
         if (this.getTakeOf()) {
             this.top += 50;
             this.y += 50;
+            System.out.println(color.getTEXT_GREEN()+"moved up "+color.getTEXT_RESET());
+
         } else {
             System.out.println(color.getTEXT_RED() + "You need to take of first." + color.getTEXT_RESET());
         }
@@ -116,6 +125,8 @@ public class Drone extends File {
             } else if (z > 50) {
                 this.bottom += 50;
                 this.z -= 50;
+                System.out.println(color.getTEXT_GREEN()+"moved down"+color.getTEXT_RESET());
+
 
             }
 
@@ -130,6 +141,8 @@ public class Drone extends File {
         if (this.getTakeOf()) {
             this.rRotate += 50;
             this.degree += 50;
+            System.out.println(color.getTEXT_GREEN()+"rotated right "+color.getTEXT_RESET());
+
         } else {
             System.out.println(color.getTEXT_RED() + "You need to take of first." + color.getTEXT_RESET());
         }
@@ -139,6 +152,8 @@ public class Drone extends File {
         if (this.getTakeOf()) {
             this.lRotate += 50;
             this.degree -= 50;
+            System.out.println(color.getTEXT_GREEN()+"rotated left "+color.getTEXT_RESET());
+
         } else {
             System.out.println(color.getTEXT_RED() + "You need to take of first." + color.getTEXT_RESET());
         }

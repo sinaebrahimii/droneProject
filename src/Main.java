@@ -60,6 +60,8 @@ public class Main {
                     drone.takePicture();
                     f.writeData("data.txt","\n");
                     break;
+                default:
+                    System.out.println(color.getTEXT_RED()+"Wring command! Enter your command again."+color.getTEXT_RESET());
             }
 
         }
