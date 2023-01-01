@@ -4,22 +4,17 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        final String TEXT_PURPLE = "\u001B[35m";
-        final String TEXT_RESET = "\u001B[0m";
-        final String TEXT_CYAN = "\u001B[36m";
-        final String redBG = "\u001B[41m";
-        final String TEXT_BLACK = "\u001B[30m";
-        final String whiteBG = "\u001B[47m";
-        final String yellowBG = "\u001B[43m";
+
 
 
         File f = new File();
+        Color color=new Color();
         Drone drone = new Drone();
         Scanner myInput = new Scanner(System.in);
         boolean n = true;
         while (n) {
-            System.out.println(TEXT_CYAN + "-------------------------------------" + TEXT_RESET);
-            System.out.println(whiteBG + TEXT_BLACK + " Enter a command: " + TEXT_RESET);
+            System.out.println(color.getTEXT_BLACK() + "-------------------------------------" + color.getTEXT_RESET());
+            System.out.println(color.getBg_white() + color.getTEXT_BLACK() + " Enter a command: " + color.TEXT_RESET);
             String command = myInput.next().toLowerCase();
 
             switch (command) {
