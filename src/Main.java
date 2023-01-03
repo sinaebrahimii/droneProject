@@ -1,9 +1,10 @@
+import java.io.FileNotFoundException;
 import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
 
 
 // file object: reading and writing data
@@ -16,7 +17,7 @@ public class Main {
         Scanner myInput = new Scanner(System.in);
         boolean n = true;
         while (n) {
-            System.out.println(color.getTEXT_BLACK() + "-------------------------------------" + color.getTEXT_RESET());
+            System.out.println(color.getTEXT_CYAN() + "-------------------------------------" + color.getTEXT_RESET());
             System.out.println(color.getBg_white() + color.getTEXT_BLACK() + " Enter a command: " + color.TEXT_RESET);
             String command = myInput.next().toLowerCase();
 
@@ -60,8 +61,12 @@ public class Main {
                     break;
 
                 case "2":
+
+//                    drone.takePicture();
+                    f.readData();
+                    break;
+                case "3":
                     drone.takePicture();
-                    f.writeData("data.txt", "\n");
                     break;
                 default:
                     System.out.println(color.getTEXT_RED() + "Wring command! Enter your command again." + color.getTEXT_RESET());

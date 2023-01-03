@@ -1,4 +1,9 @@
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.util.Arrays;
 import java.util.Random;
+import java.util.Scanner;
 
 public class Drone extends File {
     private int forward, backward, right, left, top, bottom, lRotate, rRotate = 0;
@@ -175,7 +180,12 @@ public class Drone extends File {
                 System.out.print(data[i][j] + " ");
             }
             this.writeData("data.txt", "\n");
+
         }
+        this.writeData("data.txt" ,"\n");
+
+    }
+    public void findPicture(){
 
     }
 }
