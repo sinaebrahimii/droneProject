@@ -1,7 +1,10 @@
+import org.w3c.dom.ls.LSOutput;
+
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -182,10 +185,38 @@ public class Drone extends File {
             this.writeData("data.txt", "\n");
 
         }
-        this.writeData("data.txt" ,"\n");
+        this.writeData("data.txt", "\n");
 
     }
-    public void findPicture(){
 
+    public void findPicture() throws FileNotFoundException {
+        LinkedList<String[]> data = this.readData();
+        for (int i = 0; i < data.size(); i++) {
+            String[] array = data.get(i);
+            for (int j = 0; j < array.length; j++) {
+                if (array[j].equals("117") ) {
+                    if(j+1<10){
+                        if (array[j+1].equals("224")){
+                           if(i+1<10){
+                               String [] array2=data.get(i+1);
+                               if (array2[j].equals("147")){
+                                   if(j+1<10){
+                                       if (array2[j].equals("63")){
+                                           System.out.println("found");
+                                       }
+                                   }
+                               }
+                           }
+                        }
+                    }
+                }else {
+                    System.out.println("not found");
+                }
+
+
+            }
+            System.out.println();
+        }
     }
+
 }

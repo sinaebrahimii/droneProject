@@ -50,14 +50,15 @@ public class File {
             String[] row = line.split(" ");
             data.add(row);
         }
+        return data;
 
-        for(int i=0; i<data.size(); i++){
-            String[] array=data.get(i);
-            for (int j=0; j<array.length; j++){
-                System.out.print(array[j]+" ");
-            }
-            System.out.println();
-        }
-        return  data;
+//        for(int i=0; i<data.size(); i++){
+//            String[] array=data.get(i);
+//            for (int j=0; j<array.length; j++){
+//                System.out.print(array[j]+" ");
+//            }
+//            System.out.println();
+//        }
+
     }
 }

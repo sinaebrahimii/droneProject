@@ -68,6 +68,9 @@ public class Main {
                 case "3":
                     drone.takePicture();
                     break;
+                case "4":
+                    drone.findPicture();
+                    break;
                 default:
                     System.out.println(color.getTEXT_RED() + "Wring command! Enter your command again." + color.getTEXT_RESET());
             }
