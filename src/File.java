@@ -1,6 +1,7 @@
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.Scanner;
 
 //import java.io.File;
 public class File {
@@ -37,5 +38,24 @@ public class File {
             e.printStackTrace();
         }
 
+    }
+
+    public void readData() throws FileNotFoundException {
+        java.io.File f = new java.io.File("data.txt");//this is our file
+        Scanner file = new Scanner(f);
+        LinkedList<String[]> data = new LinkedList<String[]>();
+        String[][] myArray = new String[10][10];
+        while (file.hasNextLine()) {
+            String line = file.nextLine();
+            String[] row = line.split(" ");
+            data.add(row);
+        }
+        for(int i=0; i<data.size(); i++){
+            String[] array=data.get(i);
+            for (int j=0; j<array.length; j++){
+                System.out.print(array[j]+" ");
+            }
+            System.out.println();
+        }
     }
 }
