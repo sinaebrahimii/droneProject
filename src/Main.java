@@ -13,6 +13,8 @@ public class Main {
         Color color = new Color();
 //drone class:drone control simulation
         Drone drone = new Drone();
+// Ground station takes picture and finds data
+        GroundStation groundStation = new GroundStation();
 //reading inputs from user
         Scanner myInput = new Scanner(System.in);
         boolean n = true;
@@ -66,7 +68,10 @@ public class Main {
                     f.readData();
                     break;
                 case "3":
-                    drone.takePicture();
+                    groundStation.takePicture();
+                    break;
+                case "4":
+                    groundStation.findPicture();
                     break;
                 default:
                     System.out.println(color.getTEXT_RED() + "Wring command! Enter your command again." + color.getTEXT_RESET());

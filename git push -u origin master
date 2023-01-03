@@ -1,0 +1,17 @@
+[33mcommit a60078bb30e2c306bd453d79e67d06b87659f808[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: sinaEbrahimi <sinaebrahimi31@gmail.com>
+Date:   Sun Jan 1 21:49:50 2023 +0330
+
+    txt info added for errors and method executions
+
+[33mcommit 68145260e045a7ce977d4baf947cf0d6e43e6053[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: sinaEbrahimi <sinaebrahimi31@gmail.com>
+Date:   Sun Jan 1 21:21:20 2023 +0330
+
+    color class created to make terminal txt look cool.
+
+[33mcommit 3fd31b89d806ac9d1797a9a54116ea285c08f51c[m
+Author: sinaEbrahimi <sinaebrahimi31@gmail.com>
+Date:   Sun Jan 1 20:47:56 2023 +0330
+
+    initial commit

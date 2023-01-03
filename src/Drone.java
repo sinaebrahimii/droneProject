@@ -1,7 +1,10 @@
+import org.w3c.dom.ls.LSOutput;
+
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -111,7 +114,7 @@ public class Drone extends File {
     public void moveUp() {
         if (this.getTakeOf()) {
             this.top += 50;
-            this.y += 50;
+            this.z += 50;
             System.out.println(color.getTEXT_GREEN() + "moved up " + color.getTEXT_RESET());
 
         } else {
@@ -170,22 +173,7 @@ public class Drone extends File {
         System.out.println(color.getTEXT_BLUE() + "top:" + top + "cm  " + "right:" + right + "cm  " + "forward:" + forward + "cm  " + "right rotate:" + rRotate + "cm  " + "\n" + "bottom:" + bottom + "cm  " + "left:" + left + "cm  " + "backward:" + backward + "cm  " + "left rotate:" + lRotate + "cm  " + "\n" + color.getTEXT_RESET());
     }
 
-    public void takePicture() {
-        int[][] data = new int[10][10];
-        for (int i = 0; i < data.length; i++) {
-            for (int j = 0; j < data.length; j++) {
-                int randomNum = rand.nextInt(256);
-                data[i][j] = randomNum;
-                this.writeData("data.txt", String.valueOf(data[i][j]) + " ");
-                System.out.print(data[i][j] + " ");
-            }
-            this.writeData("data.txt", "\n");
 
-        }
-        this.writeData("data.txt" ,"\n");
 
-    }
-    public void findPicture(){
 
-    }
 }

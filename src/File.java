@@ -40,7 +40,7 @@ public class File {
 
     }
 
-    public void readData() throws FileNotFoundException {
+    public LinkedList readData() throws FileNotFoundException {
         java.io.File f = new java.io.File("data.txt");//this is our file
         Scanner file = new Scanner(f);
         LinkedList<String[]> data = new LinkedList<String[]>();
@@ -50,12 +50,15 @@ public class File {
             String[] row = line.split(" ");
             data.add(row);
         }
-        for(int i=0; i<data.size(); i++){
-            String[] array=data.get(i);
-            for (int j=0; j<array.length; j++){
-                System.out.print(array[j]+" ");
-            }
-            System.out.println();
-        }
+        return data;
+
+//        for(int i=0; i<data.size(); i++){
+//            String[] array=data.get(i);
+//            for (int j=0; j<array.length; j++){
+//                System.out.print(array[j]+" ");
+//            }
+//            System.out.println();
+//        }
+
     }
 }
