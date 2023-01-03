@@ -6,9 +6,11 @@ public class Drone extends File {
     private boolean isTakeOf = false;
     private int counter = 0;
 
-
+    //creating random number
     Random rand = new Random();
-    Color color=new Color();
+    //this class colorizes the terminal
+
+    Color color = new Color();
 
 
     public void printRed() {
@@ -32,11 +34,11 @@ public class Drone extends File {
             this.z += 150;
             setTakeOf(true);
             this.counter = 0;
-            System.out.println(color.getTEXT_GREEN()+ "Take Of successful" + color.getTEXT_RESET());
+            System.out.println(color.getTEXT_GREEN() + "Take Of successful" + color.getTEXT_RESET());
         } else {
             this.counter += 1;
             if (counter <= 3) {
-                System.out.println(color.getTEXT_RED()+ "you are already in the air!" + color.getTEXT_RESET());
+                System.out.println(color.getTEXT_RED() + "you are already in the air!" + color.getTEXT_RESET());
             } else {
                 System.out.println("oskoli?");
             }
@@ -49,11 +51,11 @@ public class Drone extends File {
             this.bottom += this.z;
             this.z = 0;
             this.isTakeOf = false;
-            System.out.println(color.getTEXT_GREEN()+ "Drone landed!" + color.getTEXT_RESET());
+            System.out.println(color.getTEXT_GREEN() + "Drone landed!" + color.getTEXT_RESET());
 
 
         } else {
-            System.out.println(color.getTEXT_RED()+ "you are on the ground!" + color.getTEXT_RESET());
+            System.out.println(color.getTEXT_RED() + "you are on the ground!" + color.getTEXT_RESET());
         }
     }
 
@@ -61,7 +63,7 @@ public class Drone extends File {
         if (this.getTakeOf()) {
             this.forward += 50;
             this.x += 50;
-            System.out.println(color.getTEXT_GREEN()+"moved forward "+color.getTEXT_RESET());
+            System.out.println(color.getTEXT_GREEN() + "moved forward " + color.getTEXT_RESET());
         } else {
             System.out.println(color.getTEXT_RED() + "You need to take of first." + color.getTEXT_RESET());
         }
@@ -72,7 +74,7 @@ public class Drone extends File {
         if (this.getTakeOf()) {
             this.backward += 50;
             this.x -= 50;
-            System.out.println(color.getTEXT_GREEN()+"moved backward "+color.getTEXT_RESET());
+            System.out.println(color.getTEXT_GREEN() + "moved backward " + color.getTEXT_RESET());
 
         } else {
             System.out.println(color.getTEXT_RED() + "You need to take of first." + color.getTEXT_RESET());
@@ -83,7 +85,7 @@ public class Drone extends File {
         if (this.getTakeOf()) {
             this.right += 50;
             this.y += 50;
-            System.out.println(color.getTEXT_GREEN()+"moved right "+color.getTEXT_RESET());
+            System.out.println(color.getTEXT_GREEN() + "moved right " + color.getTEXT_RESET());
 
         } else {
             System.out.println(color.getTEXT_RED() + "You need to take of first." + color.getTEXT_RESET());
@@ -94,7 +96,7 @@ public class Drone extends File {
         if (this.getTakeOf()) {
             this.left += 50;
             this.y -= 50;
-            System.out.println(color.getTEXT_GREEN()+"moved left "+color.getTEXT_RESET());
+            System.out.println(color.getTEXT_GREEN() + "moved left " + color.getTEXT_RESET());
 
         } else {
             System.out.println(color.getTEXT_RED() + "You need to take of first." + color.getTEXT_RESET());
@@ -105,7 +107,7 @@ public class Drone extends File {
         if (this.getTakeOf()) {
             this.top += 50;
             this.y += 50;
-            System.out.println(color.getTEXT_GREEN()+"moved up "+color.getTEXT_RESET());
+            System.out.println(color.getTEXT_GREEN() + "moved up " + color.getTEXT_RESET());
 
         } else {
             System.out.println(color.getTEXT_RED() + "You need to take of first." + color.getTEXT_RESET());
@@ -125,7 +127,7 @@ public class Drone extends File {
             } else if (z > 50) {
                 this.bottom += 50;
                 this.z -= 50;
-                System.out.println(color.getTEXT_GREEN()+"moved down"+color.getTEXT_RESET());
+                System.out.println(color.getTEXT_GREEN() + "moved down" + color.getTEXT_RESET());
 
 
             }
@@ -141,7 +143,7 @@ public class Drone extends File {
         if (this.getTakeOf()) {
             this.rRotate += 50;
             this.degree += 50;
-            System.out.println(color.getTEXT_GREEN()+"rotated right "+color.getTEXT_RESET());
+            System.out.println(color.getTEXT_GREEN() + "rotated right " + color.getTEXT_RESET());
 
         } else {
             System.out.println(color.getTEXT_RED() + "You need to take of first." + color.getTEXT_RESET());
@@ -152,7 +154,7 @@ public class Drone extends File {
         if (this.getTakeOf()) {
             this.lRotate += 50;
             this.degree -= 50;
-            System.out.println(color.getTEXT_GREEN()+"rotated left "+color.getTEXT_RESET());
+            System.out.println(color.getTEXT_GREEN() + "rotated left " + color.getTEXT_RESET());
 
         } else {
             System.out.println(color.getTEXT_RED() + "You need to take of first." + color.getTEXT_RESET());
@@ -162,16 +164,17 @@ public class Drone extends File {
     public void showData() {
         System.out.println(color.getTEXT_BLUE() + "top:" + top + "cm  " + "right:" + right + "cm  " + "forward:" + forward + "cm  " + "right rotate:" + rRotate + "cm  " + "\n" + "bottom:" + bottom + "cm  " + "left:" + left + "cm  " + "backward:" + backward + "cm  " + "left rotate:" + lRotate + "cm  " + "\n" + color.getTEXT_RESET());
     }
-    public  void takePicture(){
-        int[][] data=new int[10][10];
-        for(int i=0;i<data.length;i++){
-            for(int j=0;j<data.length;j++){
+
+    public void takePicture() {
+        int[][] data = new int[10][10];
+        for (int i = 0; i < data.length; i++) {
+            for (int j = 0; j < data.length; j++) {
                 int randomNum = rand.nextInt(256);
-                data[i][j]=randomNum;
-                this.writeData("data.txt", String.valueOf(data[i][j])+" ");
-                System.out.print(data[i][j]+" ");
+                data[i][j] = randomNum;
+                this.writeData("data.txt", String.valueOf(data[i][j]) + " ");
+                System.out.print(data[i][j] + " ");
             }
-            this.writeData("data.txt","\n");
+            this.writeData("data.txt", "\n");
         }
 
     }

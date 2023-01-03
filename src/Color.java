@@ -1,4 +1,5 @@
 public class Color {
+//    this class colorizes the terminal
     public final String TEXT_RED = "\u001B[31m";
     public final String TEXT_RESET = "\u001B[0m";
     public final String TEXT_GREEN = "\u001b[32m";
