@@ -54,6 +54,9 @@ public class Main {
                 case "q":
                     drone.land();
                     break;
+                case "h":
+                    groundStation.getLocation(drone.getX(), drone.getY(), drone.getZ());
+                    break;
                 case "0":
                     drone.showData();
                     n = false;

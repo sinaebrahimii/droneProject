@@ -173,7 +173,15 @@ public class Drone extends File {
         System.out.println(color.getTEXT_BLUE() + "top:" + top + "cm  " + "right:" + right + "cm  " + "forward:" + forward + "cm  " + "right rotate:" + rRotate + "cm  " + "\n" + "bottom:" + bottom + "cm  " + "left:" + left + "cm  " + "backward:" + backward + "cm  " + "left rotate:" + lRotate + "cm  " + "\n" + color.getTEXT_RESET());
     }
 
+    public int getX() {
+        return x;
+    }
 
+    public int getY() {
+        return y;
+    }
 
-
+  public int getZ() {
+        return z;
+    }
 }
