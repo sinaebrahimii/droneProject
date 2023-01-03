@@ -114,7 +114,7 @@ public class Drone extends File {
     public void moveUp() {
         if (this.getTakeOf()) {
             this.top += 50;
-            this.y += 50;
+            this.z += 50;
             System.out.println(color.getTEXT_GREEN() + "moved up " + color.getTEXT_RESET());
 
         } else {
@@ -173,50 +173,7 @@ public class Drone extends File {
         System.out.println(color.getTEXT_BLUE() + "top:" + top + "cm  " + "right:" + right + "cm  " + "forward:" + forward + "cm  " + "right rotate:" + rRotate + "cm  " + "\n" + "bottom:" + bottom + "cm  " + "left:" + left + "cm  " + "backward:" + backward + "cm  " + "left rotate:" + lRotate + "cm  " + "\n" + color.getTEXT_RESET());
     }
 
-    public void takePicture() {
-        int[][] data = new int[10][10];
-        for (int i = 0; i < data.length; i++) {
-            for (int j = 0; j < data.length; j++) {
-                int randomNum = rand.nextInt(256);
-                data[i][j] = randomNum;
-                this.writeData("data.txt", String.valueOf(data[i][j]) + " ");
-                System.out.print(data[i][j] + " ");
-            }
-            this.writeData("data.txt", "\n");
-
-        }
-        this.writeData("data.txt", "\n");
-
-    }
-
-    public void findPicture() throws FileNotFoundException {
-        LinkedList<String[]> data = this.readData();
-        for (int i = 0; i < data.size(); i++) {
-            String[] array = data.get(i);
-            for (int j = 0; j < array.length; j++) {
-                if (array[j].equals("117") ) {
-                    if(j+1<10){
-                        if (array[j+1].equals("224")){
-                           if(i+1<10){
-                               String [] array2=data.get(i+1);
-                               if (array2[j].equals("147")){
-                                   if(j+1<10){
-                                       if (array2[j].equals("63")){
-                                           System.out.println("found");
-                                       }
-                                   }
-                               }
-                           }
-                        }
-                    }
-                }else {
-                    System.out.println("not found");
-                }
 
 
-            }
-            System.out.println();
-        }
-    }
 
 }
